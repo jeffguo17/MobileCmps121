@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/removeItem"
+            android:layout_weight="1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_alignBottom="@+id/shopImage"
+            android:layout_toRightOf="@+id/shopImage" />
+
+        <ImageView
+            android:layout_width="122dp"
+            android:layout_height="138dp"
+            android:id="@+id/shopImage" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shopItem"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/shopImage"
+            android:layout_toEndOf="@+id/shopImage"
+            android:layout_marginLeft="10dp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/priceItem"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/shopImage"
+            android:layout_below="@+id/shopItem"
+            android:layout_toRightOf="@+id/shopImage"
+            android:layout_marginLeft= "10dp"
+            android:text="Price" />
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/numbers"
+            android:layout_toRightOf="@id/removeItem"
+            android:layout_toEndOf="@id/removeItem"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/shopImage"/>
+
+        <!---
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:dropDownWidth="70dp"
+            android:layout_toEndOf="@id/removeItem"
+            android:layout_toRightOf="@id/removeItem"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/shopImage"
+            android:entries="@array/numbers" />
+        -->
+    </RelativeLayout>
+</RelativeLayout>
